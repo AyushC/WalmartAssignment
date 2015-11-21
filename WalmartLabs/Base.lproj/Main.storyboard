@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4yH-1P-Xma">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--Page View Controller-->
+        <scene sceneID="1FL-aL-hfi">
+            <objects>
+                <pageViewController storyboardIdentifier="WLPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="biy-eb-Tdf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Lq-Bb-rvM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2724" y="863"/>
+        </scene>
+        <!--Container View Controller-->
+        <scene sceneID="BGo-gc-anQ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CmC-Q8-E2s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="WLContainerViewController" automaticallyAdjustsScrollViewInsets="NO" id="b7K-F6-CLm" customClass="WLContainerViewController" customModule="WalmartLabs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n29-M0-Xuf"/>
+                        <viewControllerLayoutGuide type="bottom" id="qmn-NF-4Ya"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ah0-6p-mRR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1508" y="1959"/>
+        </scene>
+        <!--Product Detail View Controller-->
+        <scene sceneID="vzp-Mk-pOG">
+            <objects>
+                <viewController storyboardIdentifier="WLProductDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="74p-mG-q6o" customClass="WLProductDetailViewController" customModule="WalmartLabs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Znc-dN-o51"/>
+                        <viewControllerLayoutGuide type="bottom" id="BVz-mf-YO9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FHG-rh-pcg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7xg-Jz-aOK">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="JcX-15-Pc3" userLabel="HeaderView" customClass="WLProductHeaderView" customModule="WalmartLabs" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="257"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xrJ-kA-VMI">
+                                            <rect key="frame" x="200" y="28.5" width="200" height="200"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="200" id="NVH-Gb-ehl"/>
+                                                <constraint firstAttribute="width" constant="200" id="uHr-K4-i4K"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVi-ci-6gX">
+                                            <rect key="frame" x="20" y="230.5" width="560" height="21.5"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="kVi-ci-6gX" firstAttribute="leading" secondItem="JcX-15-Pc3" secondAttribute="leading" constant="20" id="3Ae-07-Y5Z"/>
+                                        <constraint firstAttribute="trailing" secondItem="kVi-ci-6gX" secondAttribute="trailing" constant="20" id="3js-XR-xhw"/>
+                                        <constraint firstAttribute="bottom" secondItem="kVi-ci-6gX" secondAttribute="bottom" constant="5" id="7TG-Wq-cb1"/>
+                                        <constraint firstItem="xrJ-kA-VMI" firstAttribute="centerY" secondItem="JcX-15-Pc3" secondAttribute="centerY" id="EaA-0p-HpB"/>
+                                        <constraint firstItem="xrJ-kA-VMI" firstAttribute="centerX" secondItem="JcX-15-Pc3" secondAttribute="centerX" id="RlU-iD-ROy"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="productImageview" destination="xrJ-kA-VMI" id="sVp-3n-Kth"/>
+                                        <outlet property="productName" destination="kVi-ci-6gX" id="BNv-f8-fdn"/>
+                                    </connections>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WLProductDetailCell" rowHeight="60" id="Is6-ht-A8Z" customClass="WLProductDetailCell" customModule="WalmartLabs" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="285" width="600" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Is6-ht-A8Z" id="WMf-3K-sZx">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mp8-Sy-AxB" userLabel="title">
+                                                    <rect key="frame" x="20" y="0.0" width="560" height="20"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="Akc-Ka-fDE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="textColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bP-oa-ICQ" userLabel="subtitle">
+                                                    <rect key="frame" x="20" y="23" width="560" height="31.5"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" id="ekw-Xx-ER7"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="5bP-oa-ICQ" firstAttribute="leading" secondItem="WMf-3K-sZx" secondAttribute="leading" constant="20" id="8HS-rQ-yA8"/>
+                                                <constraint firstAttribute="trailing" secondItem="mp8-Sy-AxB" secondAttribute="trailing" constant="20" id="Cs7-7h-CBM"/>
+                                                <constraint firstItem="5bP-oa-ICQ" firstAttribute="top" secondItem="mp8-Sy-AxB" secondAttribute="bottom" constant="3" id="Gqx-jH-gvu"/>
+                                                <constraint firstAttribute="trailing" secondItem="5bP-oa-ICQ" secondAttribute="trailing" constant="20" id="NQG-J5-vz4"/>
+                                                <constraint firstItem="mp8-Sy-AxB" firstAttribute="leading" secondItem="WMf-3K-sZx" secondAttribute="leading" constant="20" id="Uj5-Rj-yz9"/>
+                                                <constraint firstItem="mp8-Sy-AxB" firstAttribute="top" secondItem="WMf-3K-sZx" secondAttribute="top" id="Y3v-nr-p4o"/>
+                                                <constraint firstAttribute="bottom" secondItem="5bP-oa-ICQ" secondAttribute="bottom" constant="5" id="tr0-bk-74c"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="subtitle" destination="5bP-oa-ICQ" id="qrK-N6-jXr"/>
+                                            <outlet property="title" destination="mp8-Sy-AxB" id="KdU-5k-4Bc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="74p-mG-q6o" id="hTE-uW-j6S"/>
+                                    <outlet property="delegate" destination="74p-mG-q6o" id="EAK-2c-PPs"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7xg-Jz-aOK" firstAttribute="leading" secondItem="FHG-rh-pcg" secondAttribute="leading" id="1kq-Rg-OAl"/>
+                            <constraint firstItem="7xg-Jz-aOK" firstAttribute="top" secondItem="Znc-dN-o51" secondAttribute="bottom" id="HFi-ma-QRt"/>
+                            <constraint firstAttribute="trailing" secondItem="7xg-Jz-aOK" secondAttribute="trailing" id="LBo-jF-NGg"/>
+                            <constraint firstItem="BVz-mf-YO9" firstAttribute="top" secondItem="7xg-Jz-aOK" secondAttribute="bottom" id="cT7-PW-gnh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="productDetailTableView" destination="7xg-Jz-aOK" id="IGK-9i-Yp8"/>
+                        <outlet property="productHeaderView" destination="JcX-15-Pc3" id="zZp-SH-7Al"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oSG-gL-HiL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2670" y="-289"/>
+        </scene>
+        <!--Carousel-->
+        <scene sceneID="QqB-0D-dp4">
+            <objects>
+                <navigationController id="Nfr-o9-oKV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Carousel" image="carouselView" id="Fac-0N-3Dm"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BDp-NG-QAW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Uzs-l8-faz" kind="relationship" relationship="rootViewController" id="JNR-td-nqN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mOb-EJ-4wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-412" y="907"/>
+        </scene>
+        <!--Data Source-->
+        <scene sceneID="SX5-gE-bjo">
+            <objects>
+                <viewController storyboardIdentifier="oductsCarouselViewControl" id="Uzs-l8-faz" customClass="WLProductsCarouselViewController" customModule="WalmartLabs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cQ3-3M-O0G"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ll0-dO-BoY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QYo-MA-Rg7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ue7-WF-Xks" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Uzs-l8-faz" id="oCG-o0-QfC"/>
+                                    <outlet property="delegate" destination="Uzs-l8-faz" id="T3K-3L-LtJ"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ue7-WF-Xks" firstAttribute="top" secondItem="QYo-MA-Rg7" secondAttribute="top" id="h2y-Rm-Wj9"/>
+                            <constraint firstItem="ue7-WF-Xks" firstAttribute="leading" secondItem="QYo-MA-Rg7" secondAttribute="leading" id="k0l-88-6qA"/>
+                            <constraint firstAttribute="trailing" secondItem="ue7-WF-Xks" secondAttribute="trailing" id="lux-9k-5tj"/>
+                            <constraint firstAttribute="bottom" secondItem="ue7-WF-Xks" secondAttribute="bottom" id="peV-lZ-YTQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xoi-zs-dpM"/>
+                    <connections>
+                        <outlet property="productsCarousel" destination="ue7-WF-Xks" id="HPE-Un-FJo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="noh-2i-AUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="925"/>
+        </scene>
+        <!--Grid-->
+        <scene sceneID="a24-BW-b7X">
+            <objects>
+                <navigationController id="M3G-Mj-Ldw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Grid" image="gridView" id="n3K-hP-iYR"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kmB-RH-9N2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QdS-uf-lBE" kind="relationship" relationship="rootViewController" id="CIY-1U-1N8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pgf-53-ezo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-412" y="27"/>
+        </scene>
+        <!--Products Grid View Controller-->
+        <scene sceneID="TNV-Sy-pux">
+            <objects>
+                <viewController storyboardIdentifier="oductsGridViewController" id="QdS-uf-lBE" customClass="WLProductsGridViewController" customModule="WalmartLabs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hwm-p6-cwT"/>
+                        <viewControllerLayoutGuide type="bottom" id="wFa-oz-wtW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i7f-Bb-egF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Dsn-g2-pex">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sAq-j4-gKr">
+                                    <size key="itemSize" width="170" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WLProductCollectionCell" id="SjC-Xe-rAM" customClass="WLProductCollectionCell" customModule="WalmartLabs" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="170" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGL-Bj-pYj" userLabel="ProductName">
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="50"/>
+                                                    <animations/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="fWM-P2-zX0"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U20-B5-Glg" userLabel="ProductPrice">
+                                                    <rect key="frame" x="0.0" y="175" width="170" height="25"/>
+                                                    <animations/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="SBX-1U-nId"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eEO-sm-Ilz">
+                                                    <rect key="frame" x="35" y="50" width="100" height="100"/>
+                                                    <animations/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="5L1-Lc-Pg2"/>
+                                                        <constraint firstAttribute="height" constant="100" id="7sp-SA-ex5"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="U20-B5-Glg" secondAttribute="trailing" id="8YA-1W-juI"/>
+                                            <constraint firstItem="EGL-Bj-pYj" firstAttribute="leading" secondItem="SjC-Xe-rAM" secondAttribute="leading" id="PBf-Rr-y16"/>
+                                            <constraint firstItem="eEO-sm-Ilz" firstAttribute="centerX" secondItem="SjC-Xe-rAM" secondAttribute="centerX" id="QpO-0H-NuE"/>
+                                            <constraint firstAttribute="bottom" secondItem="U20-B5-Glg" secondAttribute="bottom" id="eVl-Qt-QHw"/>
+                                            <constraint firstItem="U20-B5-Glg" firstAttribute="leading" secondItem="SjC-Xe-rAM" secondAttribute="leading" id="eul-NT-umf"/>
+                                            <constraint firstItem="eEO-sm-Ilz" firstAttribute="centerY" secondItem="SjC-Xe-rAM" secondAttribute="centerY" id="eyF-ns-qtM"/>
+                                            <constraint firstItem="EGL-Bj-pYj" firstAttribute="top" secondItem="SjC-Xe-rAM" secondAttribute="top" id="qHV-NM-0PU"/>
+                                            <constraint firstAttribute="trailing" secondItem="EGL-Bj-pYj" secondAttribute="trailing" id="sy4-kF-aVW"/>
+                                        </constraints>
+                                        <size key="customSize" width="170" height="200"/>
+                                        <connections>
+                                            <outlet property="productImageview" destination="eEO-sm-Ilz" id="siC-eC-VTZ"/>
+                                            <outlet property="productName" destination="EGL-Bj-pYj" id="ehY-Sx-TQQ"/>
+                                            <outlet property="productShortDescription" destination="U20-B5-Glg" id="gme-Tf-cYx"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="QdS-uf-lBE" id="Oq2-Qf-PT6"/>
+                                    <outlet property="delegate" destination="QdS-uf-lBE" id="fvK-i6-qN0"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Dsn-g2-pex" secondAttribute="trailing" id="9qU-qq-VTa"/>
+                            <constraint firstAttribute="bottom" secondItem="Dsn-g2-pex" secondAttribute="bottom" id="E12-Y0-25d"/>
+                            <constraint firstItem="Dsn-g2-pex" firstAttribute="top" secondItem="i7f-Bb-egF" secondAttribute="top" id="frk-5Z-Jxb"/>
+                            <constraint firstItem="Dsn-g2-pex" firstAttribute="leading" secondItem="i7f-Bb-egF" secondAttribute="leading" id="tFY-cH-Ypk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4jf-yx-xd6"/>
+                    <connections>
+                        <outlet property="productCollectionView" destination="Dsn-g2-pex" id="NXv-S9-P8y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bFe-dl-0vu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372" y="29"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="qkO-GE-DHK">
+            <objects>
+                <navigationController id="twW-mC-mtI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="List" image="listView" id="nOL-MC-toM"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yle-H1-Gaa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VVB-Q4-uHX" kind="relationship" relationship="rootViewController" id="d3q-FW-V6s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yd1-vO-nIV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-412" y="-805"/>
+        </scene>
+        <!--Products List View Controller-->
+        <scene sceneID="KkU-DQ-A1D">
+            <objects>
+                <viewController storyboardIdentifier="WLProductsListViewController" id="VVB-Q4-uHX" customClass="WLProductsListViewController" customModule="WalmartLabs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NEr-Fo-o9D"/>
+                        <viewControllerLayoutGuide type="bottom" id="6mk-dE-Zl7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mwP-ar-r3a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fxE-bM-0Do">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WLProductCell" rowHeight="80" id="Hne-I6-aKt" customClass="WLProductCell" customModule="WalmartLabs" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hne-I6-aKt" id="d30-ks-KjY">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Uc-mL-xIh">
+                                                    <rect key="frame" x="20" y="4" width="70" height="70.5"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="ApD-3r-XoB"/>
+                                                        <constraint firstAttribute="width" constant="70" id="D1L-gE-9BY"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GG-go-YGn">
+                                                    <rect key="frame" x="110" y="8" width="470" height="20.5"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="w5I-k7-18N"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Short description" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLT-fR-AHN">
+                                                    <rect key="frame" x="110" y="28" width="470" height="16"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="JRT-Yo-zit"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="zLT-fR-AHN" firstAttribute="leading" secondItem="8GG-go-YGn" secondAttribute="leading" id="0HU-9f-EbG"/>
+                                                <constraint firstItem="zLT-fR-AHN" firstAttribute="top" secondItem="8GG-go-YGn" secondAttribute="bottom" id="26J-es-l0c"/>
+                                                <constraint firstItem="8GG-go-YGn" firstAttribute="leading" secondItem="4Uc-mL-xIh" secondAttribute="trailing" constant="20" id="5FY-TX-xCf"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zLT-fR-AHN" secondAttribute="bottom" id="HYU-ld-Efe"/>
+                                                <constraint firstItem="8GG-go-YGn" firstAttribute="top" secondItem="d30-ks-KjY" secondAttribute="top" constant="8" id="IMf-Fg-zsv"/>
+                                                <constraint firstItem="4Uc-mL-xIh" firstAttribute="leading" secondItem="d30-ks-KjY" secondAttribute="leading" constant="20" id="KXf-Zj-t6N"/>
+                                                <constraint firstAttribute="trailing" secondItem="zLT-fR-AHN" secondAttribute="trailing" constant="20" id="ZO7-2Z-ZSr"/>
+                                                <constraint firstItem="4Uc-mL-xIh" firstAttribute="centerY" secondItem="d30-ks-KjY" secondAttribute="centerY" id="bqD-3R-zd9"/>
+                                                <constraint firstAttribute="trailing" secondItem="8GG-go-YGn" secondAttribute="trailing" constant="20" id="ivg-bf-9uL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="productImageview" destination="4Uc-mL-xIh" id="NWc-C0-djF"/>
+                                            <outlet property="productName" destination="8GG-go-YGn" id="Mmm-5a-q6H"/>
+                                            <outlet property="productShortDescription" destination="zLT-fR-AHN" id="Ql1-3i-ZQG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="VVB-Q4-uHX" id="B5N-9d-a4w"/>
+                                    <outlet property="delegate" destination="VVB-Q4-uHX" id="Gfz-1s-gcx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fxE-bM-0Do" firstAttribute="top" secondItem="mwP-ar-r3a" secondAttribute="top" id="RjY-qa-ob5"/>
+                            <constraint firstAttribute="trailing" secondItem="fxE-bM-0Do" secondAttribute="trailing" id="ji2-Rc-QLs"/>
+                            <constraint firstItem="fxE-bM-0Do" firstAttribute="leading" secondItem="mwP-ar-r3a" secondAttribute="leading" id="ldK-PZ-oX0"/>
+                            <constraint firstAttribute="bottom" secondItem="fxE-bM-0Do" secondAttribute="bottom" id="sBy-AR-YVz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Zj-Ce-SDU"/>
+                    <connections>
+                        <outlet property="productsTableView" destination="fxE-bM-0Do" id="Ezd-Zq-gyT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iP1-wC-ZRt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="-795"/>
+        </scene>
+        <!--Products View Controller-->
+        <scene sceneID="Pne-5e-W1a">
+            <objects>
+                <tabBarController id="4yH-1P-Xma" customClass="WLProductsViewController" customModule="WalmartLabs" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="U82-dr-a9m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="twW-mC-mtI" kind="relationship" relationship="viewControllers" id="plV-c1-BrP"/>
+                        <segue destination="M3G-Mj-Ldw" kind="relationship" relationship="viewControllers" id="hlJ-z7-ms4"/>
+                        <segue destination="Nfr-o9-oKV" kind="relationship" relationship="viewControllers" id="EOe-yb-38g"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z4m-AR-WBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarItem title="Item" id="cgI-Oc-2Wj"/>
+            </objects>
+            <point key="canvasLocation" x="-1596" y="27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="carouselView" width="25" height="25"/>
+        <image name="gridView" width="25" height="25"/>
+        <image name="listView" width="25" height="25"/>
+    </resources>
+</document>
