@@ -18,7 +18,15 @@ class WLProductCell : UITableViewCell
     func setUpProductCellForProduct(productObj : WLProduct)
     {
         self.productName.text = productObj.productName
-        self.productShortDescription?.text = productObj.shortDescription
+        
+        if productObj.shortDescription != nil
+        {
+            self.productShortDescription?.text = productObj.shortDescription
+        }else
+        {
+            self.productShortDescription?.text = productObj.longDescription
+        }
+        
         self.productImageview?.sd_setImageWithURL(NSURL(string: (productObj.productImage)!), placeholderImage: UIImage(named: "product_icon"))
     }
     

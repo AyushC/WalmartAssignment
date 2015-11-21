@@ -35,6 +35,9 @@ class WLProductDetailViewController: UIViewController {
         if let description = productObj?.longDescription
         {
             productDetailArray.append(["Description" : description])
+        }else if let shortDescription = productObj?.shortDescription
+        {
+            productDetailArray.append(["Description" : shortDescription])
         }
         
         self.productDetailTableView.reloadData()
