@@ -27,7 +27,15 @@ class WLProductsGridViewController: UIViewController
     {
         super.viewWillAppear(animated)
         
-        self.loadProducts()
+        if self.productsArray.count == 0
+        {
+            self.loadProducts()
+        } else
+        {
+            self.productsArray.removeAll()
+            self.productsArray = WLProductsDataManager.sharedInstance.productsArray
+            self.productCollectionView.reloadData()
+        }
     }
     
     override func didReceiveMemoryWarning()
