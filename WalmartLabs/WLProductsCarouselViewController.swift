@@ -13,6 +13,7 @@ class WLProductsCarouselViewController: UIViewController
 {
     @IBOutlet weak var productsCarousel : iCarousel!
     var productsArray: Array<WLProduct> = []
+    var isLoadingMore = false
 
     override func viewDidLoad()
     {
@@ -26,12 +27,11 @@ class WLProductsCarouselViewController: UIViewController
     {
         super.viewWillAppear(animated)
         
-        if self.productsArray.count == 0
+        if WLProductsDataManager.sharedInstance.productsArray.count == 0
         {
             self.loadProducts()
         } else
         {
-            self.productsArray.removeAll()
             self.productsArray = WLProductsDataManager.sharedInstance.productsArray
             self.productsCarousel.reloadData()
         }
@@ -53,6 +53,7 @@ class WLProductsCarouselViewController: UIViewController
                 self.productsArray.removeAll()
                 self.productsArray = productsArray
                 self.productsCarousel.reloadData()
+                self.isLoadingMore = false
                 MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
             }else
             {
@@ -123,8 +124,9 @@ class WLProductsCarouselViewController: UIViewController
     
     func carouselDidScroll(carousel : iCarousel)
     {
-        if Int(carousel.scrollOffset) == (productsArray.count - 5)
+        if !isLoadingMore && Int(carousel.scrollOffset) == (productsArray.count - 5)
         {
+            isLoadingMore = true
             self.loadProducts()
         }
     }

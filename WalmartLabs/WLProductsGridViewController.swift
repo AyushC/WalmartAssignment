@@ -27,12 +27,8 @@ class WLProductsGridViewController: UIViewController
     {
         super.viewWillAppear(animated)
         
-        if self.productsArray.count == 0
+        if WLProductsDataManager.sharedInstance.productsArray.count > 0
         {
-            self.loadProducts()
-        } else
-        {
-            self.productsArray.removeAll()
             self.productsArray = WLProductsDataManager.sharedInstance.productsArray
             self.productCollectionView.reloadData()
         }
@@ -95,8 +91,8 @@ class WLProductsGridViewController: UIViewController
     {
         let contentOffset = scrollView.contentOffset.y
         let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height;
-        
-        if !isLoadingMore && (Float(maximumOffset - contentOffset) <= Float(threshold))
+        let offset = Float(maximumOffset - contentOffset)
+        if !isLoadingMore && (offset <= Float(threshold) && offset > 0)
         {
             self.isLoadingMore = true
             self.loadProducts()

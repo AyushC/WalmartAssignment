@@ -29,12 +29,8 @@ class WLProductsListViewController: UIViewController
     {
         super.viewWillAppear(animated)
         
-        if self.productsArray.count == 0
+        if WLProductsDataManager.sharedInstance.productsArray.count > 0
         {
-            self.loadProducts()
-        } else
-        {
-            self.productsArray.removeAll()
             self.productsArray = WLProductsDataManager.sharedInstance.productsArray
             self.productsTableView.reloadData()
         }
