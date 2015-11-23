@@ -27,10 +27,7 @@ class WLProductsCarouselViewController: UIViewController
     {
         super.viewWillAppear(animated)
         
-        if WLProductsDataManager.sharedInstance.productsArray.count == 0
-        {
-            self.loadProducts()
-        } else
+        if WLProductsDataManager.sharedInstance.productsArray.count > 0
         {
             self.productsArray = WLProductsDataManager.sharedInstance.productsArray
             self.productsCarousel.reloadData()

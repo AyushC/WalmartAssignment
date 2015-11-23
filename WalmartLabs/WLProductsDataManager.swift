@@ -12,7 +12,7 @@ class WLProductsDataManager: NSObject {
 
     static let sharedInstance = WLProductsDataManager()
     
-    private(set) var productsArray:[WLProduct]
+    var productsArray:[WLProduct]
     typealias CompletionBlock = Array<WLProduct>! -> Void
     
     private override init()
