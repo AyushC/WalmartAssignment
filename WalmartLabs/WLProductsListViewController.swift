@@ -52,12 +52,10 @@ class WLProductsListViewController: UIViewController
                 self.productsArray.removeAll()
                 self.productsArray = productsArray
                 self.productsTableView.reloadData()
-                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
                 self.isLoadingMore = false
-            }else
-            {
-                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
             }
+            
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
         }
     }
     

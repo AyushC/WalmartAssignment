@@ -57,7 +57,8 @@ class WLProduct: NSObject, NSCoding
         self.inStock = decoder.decodeBoolForKey("inStock")
     }
     
-    func encodeWithCoder(coder: NSCoder) {
+    func encodeWithCoder(coder: NSCoder)
+    {
         coder.encodeObject(self.productId, forKey: "productId")
         coder.encodeObject(self.productName, forKey: "productName")
         coder.encodeObject(self.shortDescription, forKey: "shortDescription")

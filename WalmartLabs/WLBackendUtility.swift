@@ -30,6 +30,12 @@ class WLBackendUtility: NSObject
         case GetProductsList                     = "/walmartproducts/"
     }
     
+    internal enum Status: NSInteger
+    {
+        case Success                     = 200
+        case APIKeyExpired               = 401
+    }
+    
     class func requestProductsDataWithCompletionBlock(compBlock: CompletionBlock) -> Bool
     {
         // Check if request is possible
@@ -77,7 +83,7 @@ class WLBackendUtility: NSObject
                             
                             let resultCode = jsonDict!["status"] as? Int
                             
-                            if resultCode == 200
+                            if resultCode == Status.Success.rawValue
                             {
                                 WL_PAGE_NUMBER = (jsonDict!["pageNumber"] as? Int)! + 1
                                 WL_TOTAL_PRODUCTS_COUNT = (jsonDict!["totalProducts"] as? Int)!
@@ -86,12 +92,23 @@ class WLBackendUtility: NSObject
                                 dispatch_async(dispatch_get_main_queue(), {
                                     compBlock(productsArray: (jsonDict!["products"] as? Array<Dictionary<String,AnyObject>>)!)
                                 })
+                            }else if resultCode == Status.APIKeyExpired.rawValue
+                            {
+                                dispatch_async(dispatch_get_main_queue(),
+                                    {
+                                        WLBackendUtility.showAlertWithMessage(jsonDict!["error"] as! String, title: "Error")
+                                        compBlock(productsArray: [])
+                                })
                             }
                             
                         } catch let error as NSError
                         {
                             print("json error: \(error.localizedDescription)")
-                        }
+                            dispatch_async(dispatch_get_main_queue(),
+                                {
+                                    WLBackendUtility.showAlertWithMessage(error.localizedDescription, title: String(error.code))
+                                    compBlock(productsArray: [])
+                            })                        }
                     }
                     
                 }
@@ -100,10 +117,7 @@ class WLBackendUtility: NSObject
                 print("Error description: \(error!.localizedDescription)")
                 dispatch_async(dispatch_get_main_queue(),
                     {
-                        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-                        let errorAlert: UIAlertController = UIAlertController(title: String(error!.code), message: error!.localizedDescription, preferredStyle: .Alert)
-                        errorAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-                        appDelegate.window?.rootViewController!.presentViewController(errorAlert, animated: true, completion: nil)
+                        WLBackendUtility.showAlertWithMessage(error!.localizedDescription, title: String(error!.code))
                         compBlock(productsArray: [])
                 })
             }
@@ -112,4 +126,11 @@ class WLBackendUtility: NSObject
         
     }
     
+    class func showAlertWithMessage(msg : String, title : String)
+    {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let errorAlert: UIAlertController = UIAlertController(title: title, message: msg, preferredStyle: .Alert)
+        errorAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        appDelegate.window?.rootViewController!.presentViewController(errorAlert, animated: true, completion: nil)
+    }
 }

@@ -50,12 +50,11 @@ class WLProductsGridViewController: UIViewController
                 self.productsArray.removeAll()
                 self.productsArray = productsArray
                 self.productCollectionView.reloadData()
-                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
                 self.isLoadingMore = false
-            }else
-            {
-                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
             }
+            
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
+
         }
     }
     

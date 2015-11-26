@@ -51,11 +51,9 @@ class WLProductsCarouselViewController: UIViewController
                 self.productsArray = productsArray
                 self.productsCarousel.reloadData()
                 self.isLoadingMore = false
-                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
-            }else
-            {
-                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
             }
+            
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
         }
     }
 
