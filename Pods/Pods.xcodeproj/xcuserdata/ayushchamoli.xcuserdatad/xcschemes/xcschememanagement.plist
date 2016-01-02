@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>HockeySDK-HockeySDKResources.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>143DB84773138E6CC6096318DBCEE6B9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>2E767C26CC6DB41BB0886516CCB27EF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EE6B1F1AC66CBF079FFC21C4935CBEDC</key>
+		<key>5DA44BE0CE8D49E58CC1149774131681</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C21929976D33E39208717C434637157F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECD4C68E9B98EFD4F1178200779E0ECC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

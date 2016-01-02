@@ -1,10 +1,11 @@
 # Uncomment this line to define a global platform for your project
-platform :ios, '7.0'
+platform :ios, '8.0'
 
 target 'WalmartLabs' do
 
 pod 'SDWebImage', '~> 3.7'
 pod 'MBProgressHUD'
+pod 'HockeySDK'
 
 end
 

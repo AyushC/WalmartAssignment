@@ -15,7 +15,7 @@ class WLBackendUtility: NSObject
     private static let WL_PRODUCTS_API_KEY        = "6336b3b1-ccb6-426e-b3aa-3696416aa299"
     
     static var WL_PAGE_NUMBER             = 1
-    private static let WL_PAGE_SIZE               = 20
+    private static let WL_PAGE_SIZE       = 20
     static var WL_TOTAL_PRODUCTS_COUNT    = 0
     static var WL_PRODUCTS_COUNT          = 0
     
