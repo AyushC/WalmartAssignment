@@ -8,6 +8,7 @@
 
 import UIKit
 import MBProgressHUD
+import iCarousel
 
 class WLProductsCarouselViewController: UIViewController
 {

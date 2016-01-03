@@ -23,7 +23,6 @@
 		0AC823521C0029D5005B364A /* WLProductDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC823511C0029D5005B364A /* WLProductDetailCell.swift */; };
 		0AC823541C005487005B364A /* WLContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC823531C005487005B364A /* WLContainerViewController.swift */; };
 		0AC823561C0066C9005B364A /* WLProductCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC823551C0066C9005B364A /* WLProductCollectionCell.swift */; };
-		0AC8235A1C007213005B364A /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC823581C007213005B364A /* iCarousel.m */; };
 		0AC8235C1C00E002005B364A /* WLProductsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC8235B1C00E002005B364A /* WLProductsListViewController.swift */; };
 		0AC8235E1C00E0B4005B364A /* WLProductsGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC8235D1C00E0B4005B364A /* WLProductsGridViewController.swift */; };
 		0AC823601C00E0DA005B364A /* WLProductsCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC8235F1C00E0DA005B364A /* WLProductsCarouselViewController.swift */; };
@@ -84,8 +83,6 @@
 		0AC823511C0029D5005B364A /* WLProductDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLProductDetailCell.swift; sourceTree = "<group>"; };
 		0AC823531C005487005B364A /* WLContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLContainerViewController.swift; sourceTree = "<group>"; };
 		0AC823551C0066C9005B364A /* WLProductCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLProductCollectionCell.swift; sourceTree = "<group>"; };
-		0AC823571C007213005B364A /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
-		0AC823581C007213005B364A /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		0AC8235B1C00E002005B364A /* WLProductsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLProductsListViewController.swift; sourceTree = "<group>"; };
 		0AC8235D1C00E0B4005B364A /* WLProductsGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLProductsGridViewController.swift; sourceTree = "<group>"; };
 		0AC8235F1C00E0DA005B364A /* WLProductsCarouselViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLProductsCarouselViewController.swift; sourceTree = "<group>"; };
@@ -146,7 +143,6 @@
 		0A9F6B001BFED42D004B0617 /* WalmartLabs */ = {
 			isa = PBXGroup;
 			children = (
-				0AC823591C007213005B364A /* iCarousel */,
 				0AC823501C001802005B364A /* Main */,
 				0AC8234F1C0017ED005B364A /* CustomViews */,
 				0A9F6B391BFEEA33004B0617 /* ModelClasses */,
@@ -244,16 +240,6 @@
 			);
 			name = Main;
 			sourceTree = "<group>";
-		};
-		0AC823591C007213005B364A /* iCarousel */ = {
-			isa = PBXGroup;
-			children = (
-				0AC823571C007213005B364A /* iCarousel.h */,
-				0AC823581C007213005B364A /* iCarousel.m */,
-			);
-			name = iCarousel;
-			path = "/Users/ayushchamoli/Downloads/iCarousel-master/Examples/Swift Example/../../iCarousel";
-			sourceTree = "<absolute>";
 		};
 		175ED2FD63F9D7CD77F488B6 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -467,7 +453,6 @@
 				0A9F6B351BFED93F004B0617 /* WLProductCell.swift in Sources */,
 				0AC823521C0029D5005B364A /* WLProductDetailCell.swift in Sources */,
 				0A9F6B021BFED42D004B0617 /* AppDelegate.swift in Sources */,
-				0AC8235A1C007213005B364A /* iCarousel.m in Sources */,
 				0A9F6B381BFEDB20004B0617 /* WLBackendUtility.swift in Sources */,
 				0AC823541C005487005B364A /* WLContainerViewController.swift in Sources */,
 			);
@@ -630,6 +615,38 @@
 				INFOPLIST_FILE = WalmartLabs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"MBProgressHUD\"",
+					"-l\"SDWebImage\"",
+					"-l\"c++\"",
+					"-l\"iCarousel\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"HockeySDK\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"QuickLook\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Ayush.WalmartLabs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -657,6 +674,38 @@
 				INFOPLIST_FILE = WalmartLabs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"MBProgressHUD\"",
+					"-l\"SDWebImage\"",
+					"-l\"c++\"",
+					"-l\"iCarousel\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"HockeySDK\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"QuickLook\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Ayush.WalmartLabs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

@@ -4,22 +4,27 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>HockeySDK-HockeySDKResources.xcscheme_^#shared#^_</key>
+		<key>HockeySDK-HockeySDKResources.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MBProgressHUD.xcscheme_^#shared#^_</key>
+		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-WalmartLabs.xcscheme_^#shared#^_</key>
+		<key>Pods-WalmartLabs.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SDWebImage.xcscheme_^#shared#^_</key>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>iCarousel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0D53E74A3A1ACDEC3EC7596CCC1C92E4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2E767C26CC6DB41BB0886516CCB27EF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5DA44BE0CE8D49E58CC1149774131681</key>
+		<key>6335A8645DCA0507E9AE2F3DA9BCC99B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C21929976D33E39208717C434637157F</key>
+		<key>6B0E3425F2BFBD2FD95919A65AF829F0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ECD4C68E9B98EFD4F1178200779E0ECC</key>
+		<key>EA8CE37DA88BE5A1CCF077E8A937384F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

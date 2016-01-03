@@ -6,6 +6,7 @@ target 'WalmartLabs' do
 pod 'SDWebImage', '~> 3.7'
 pod 'MBProgressHUD'
 pod 'HockeySDK'
+pod 'iCarousel'
 
 end
 

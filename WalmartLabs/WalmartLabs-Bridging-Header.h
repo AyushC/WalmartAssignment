@@ -5,5 +5,5 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <CommonCrypto/CommonCrypto.h>
-#import "iCarousel.h"
+#import "iCarousel/iCarousel.h"
 
