@@ -17,10 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
-        //self.retrieveLoadedProducts()
         BITHockeyManager.sharedHockeyManager().configureWithIdentifier("561866ec949c4081929bbe6c5cd56ddd");
         BITHockeyManager.sharedHockeyManager().startManager();
         BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation(); // This line is obsolete in the crash only build
+        //self.retrieveLoadedProducts()
 
         return true
     }
