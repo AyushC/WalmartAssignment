@@ -4,22 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>HockeySDK-HockeySDKResources.xcscheme</key>
+		<key>HockeySDK-HockeySDKResources.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MBProgressHUD.xcscheme</key>
+		<key>MBProgressHUD.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-WalmartLabs.xcscheme</key>
+		<key>Pods-WalmartLabs.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SDWebImage.xcscheme</key>
+		<key>SDWebImage.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
